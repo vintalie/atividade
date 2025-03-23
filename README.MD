@@ -9,6 +9,12 @@ Opa pessoal! desenvolvi essa estrutura para nós darmos continuidade a aula do R
 
  # Como instalar a aplicação
  A aplicação utiliza nodejs, e npm (certifique-se de ter baixado no site oficial do node), e usa os pacotes [Express](https://expressjs.com/), [Sequelize](https://sequelize.org/), [EJS](https://ejs.co/), entre outros
+
+ ## Instalando
+ Para instalar primeiro baixe o projeto utilizando o comando ```git clone https://github.com/vintalie/atividade/``` , após isso acesse a pagina do projeto com ```cd atividade```
+
+
+
 ## Fontes
 
 - [Sequelize](https://sequelize.org/)
