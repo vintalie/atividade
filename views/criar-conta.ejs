@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <section>
+            <div class="container pt-4 pb-4  d-flex align-items-center justify-content-center" style="min-height:100vh;">
+             <form method="post" class="row form-criar-conta g-4 border" style="width:490px;">
+                <h1>Sign-in</h1>
+                <div class="col-md-12">
+                    <input placeholder="Email" type="email" class="form-control" id="inputEmail4" name="email">
+                </div>
+                <div class="col-md-12">
+                    <input placeholder="Senha" type="password" class="form-control" id="inputPassword4" name="senha">
+                </div>
+                
+                <div class="col-md-4">
+                    <input placeholder="+__" type="text" class="form-control" id="celular" name="celular">
+                </div>
+                <div class="col-md-8">
+                    <input placeholder="Celular" type="text" class="form-control" id="celular" name="celular">
+                </div>
+                <div class="col-12 text-end">
+                    <% if (typeof aviso !== 'undefined') { %>
+                        <div class="alert alert-danger d-flex align-items-center" role="alert">
+                            <div>
+                                <%- aviso %>
+                            </div>
+                        </div>
+                    <% } %>
+                    <button type="submit" class="btn btn-primary">Entrar</button>
+                </div>
+            </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
