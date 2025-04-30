@@ -4,21 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <%- include('parts/header.ejs') %>
-    <h1>Home</h1>
-    <p>Seja bem-vindo ao meu site!</p>
-    <br>
-    <h2>Essas são as funcionaidades que você pode aproveitar</h2>
-    <ul>
-        <a><li>Hobbies</li></a>
-        <a><li>Filmes</li></a>
-        <a><li>Musicas</li></a>
-        <a><li>Livros</li></a>
-    </ul>
+    <main>
+        <section>
+            <div class="container">
+                <div class="container d-flex align-items-start justify-content-center">
+                    <div class="container m-0 d-flex flex-column align-items-start justify-content-center" style="max-width: 560px;height: 100vh;">
+                        <h3 style="max-width:290px;">Conheça um pouco da plataforma</h3>
+                        <p>Essa aplicação é o que chamamos de MVP e serve para concluirmos com um olhar amplo sobre o que queremos no resultado final do nosso sistema. A aplicação se propõe de criar um usuario, seja ele veterinario ou cliente, logar-se, e disparar uma noificação nos veterinarios da região quando um cliente disparar o sinal de emergencia</p>
+                        <a href="/criar-conta" class="btn btn-primary" type="button">Faça uma conta para iniciar!</a>
+                    </div>
+                    <div class="container">
+                        <img class="img-fluid" src="img/Medico-Veterinario.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <%- include('parts/footer.ejs') %>
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
