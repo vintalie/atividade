@@ -14,7 +14,7 @@ module.exports = {
       },
       id_bairro: {
         type: Sequelize.INTEGER,
-        references:{model:'Districts', key: 'id'}
+        references:{model:'Citys', key: 'id'}
       },
       createdAt: {
         allowNull: false,
