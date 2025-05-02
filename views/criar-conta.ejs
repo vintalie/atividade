@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,58 +9,107 @@
     <link rel="stylesheet" href="css/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <main>
         <section>
-            <div class="container pt-4 pb-4  d-flex align-items-center justify-content-center" style="min-height:100vh;">
-             <form method="post" class="row form-criar-conta g-4 border" style="width:490px;">
-                <h1>Sign-in</h1>
-                <div class="col-md-12">
-                    <input placeholder="Nome" type="text" class="form-control" id="inputName4" name="nome">
-                </div>
-                <div class="col-md-12">
-                    <input placeholder="Email" type="email" class="form-control" id="inputEmail4" name="email">
-                </div>
-                <div class="col-md-12">
-                    <input placeholder="Senha" type="password" class="form-control" id="inputPassword4" name="senha">
-                </div>
-                
-                <div class="col-md-4">
-                    <input placeholder="+__" type="text" class="form-control" id="celular" name="celular">
-                </div>
-                <div class="col-md-8">
-                    <input placeholder="Celular" type="text" class="form-control" id="celular" name="celular">
-                </div>
-                <div class="col-6">
-                    <i>Você é um:</i>
-                </div>
-                <div class="col-6">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="tipo" value="clinica" id="radioDefault2" checked>
-                        <label class="form-check-label" for="radioDefault2">
-                            Clinica
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="tipo" value="cliente" id="radioDefault1">
-                        <label class="form-check-label" for="radioDefault1">
-                            Dono de Pet
-                        </label>
-                    </div>
-                </div>
-                <div class="col-12 text-end">
-                    <% if (typeof aviso !== 'undefined') { %>
-                        <div class="alert alert-danger d-flex align-items-center" role="alert">
-                            <div>
-                                <%- aviso %>
+            <div class="container pt-4 pb-4  d-flex align-items-center justify-content-center"
+                style="min-height:100vh;">
+                <form method="post" class="row g-4">
+                    <div id="slide-cadastro" class="carousel slide" style="width:490px;">
+                        <% if (typeof aviso !=='undefined' ) { %>
+                            <div class="alert alert-danger d-flex align-items-center" role="alert">
+                                <div>
+                                    <%- aviso %>
+                                </div>
+                            </div>
+                            <% } %>
+                                <div class="carousel-inner form-criar-conta">
+                                    <div class="carousel-item active">
+                                        <div class="container d-flex row flex-row g-4"
+                                            style="margin:auto;min-height:552px;">
+                                            <h1 align="center">Criar Conta</h1>
+                                            <div class="col-md-12">
+                                                <input placeholder="Nome" type="text" class="form-control"
+                                                    id="inputName4" name="nome">
+                                            </div>
+                                            <div class="col-md-12">
+                                                <input placeholder="Email" type="email" class="form-control"
+                                                    id="inputEmail4" name="email">
+                                            </div>
+                                            <div class="col-md-12">
+                                                <input placeholder="Senha" type="password" class="form-control"
+                                                    id="inputPassword4" name="senha">
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <input placeholder="+__" type="text" class="form-control" id="celular"
+                                                    name="celular">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input placeholder="Celular" type="text" class="form-control"
+                                                    id="celular" name="celular">
+                                            </div>
+                                            <div class="col-6">
+                                                <i>Você é um:</i>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="tipo"
+                                                        value="clinica" id="radioDefault2" checked>
+                                                    <label class="form-check-label" for="radioDefault2">
+                                                        Clinica
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="tipo"
+                                                        value="cliente" id="radioDefault1">
+                                                    <label class="form-check-label" for="radioDefault1">
+                                                        Dono de Pet
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 text-end">
+                                                <button class="btn btn-primary" type="button"
+                                                    data-bs-target="#slide-cadastro"
+                                                    data-bs-slide="next">Continuar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="container d-flex row flex-row g-4 "
+                                            style="margin:auto;min-height:552px;">
+                                            <div class="container row p-0" style="margin:auto;max-height:290px;"">
+                                                <h2 align="center">Endereço</h2>
+                                                <div class="col-12">
+                                                    <input placeholder="Endereco" name="endereco" type="text" class="form-control" id="endereco"
+                                                        placeholder="Apartment, studio, or floor">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input placeholder="Cidade" name="cidade" type="text" class="form-control" id="cidade">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <select placeholder="Estado" name="estado" id="inputState" class="form-select">
+                                                        <option selected>Escolha</option>
+                                                        <option>...</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                                <div class="col-12 text-end">
+                                                    <button type="submit" class="btn btn-primary">Criar Conta</button>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    <% } %>
-                    <button type="submit" class="btn btn-primary">Criar Conta</button>
-                </div>
-            </form>
-        </div>
-    </section>
-</main>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
