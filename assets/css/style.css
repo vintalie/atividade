@@ -1,13 +1,13 @@
 header .navbar{
     background-color:#43c3dd!important
 }
-.form-login, .form-criar-conta{
+.form-login, .form-criar-conta {
     padding:32px;
     border-radius: 32px;
     box-shadow: 0px 1px 12px rgba(0,0,0,.4);
     background-color: #f2faff;;
 }
-.form-criar-conta [type="text"], .form-criar-conta [type="password"], .form-criar-conta [type="email"],.form-login [type="text"], .form-login [type="password"], .form-login [type="email"] /*Fala que foi IA que fez isso daqui q eu cometo um crime de odio*/{
+.form-criar-conta [type="text"], .form-criar-conta select, .form-criar-conta [type="password"], .form-criar-conta [type="email"],.form-login [type="text"], .form-login [type="password"], .form-login [type="email"] /*Fala que foi IA que fez isso daqui q eu cometo um crime de odio*/{
     border-radius:40px;
     background-color: #f2faff;;
     border:solid 4px #004a94;
@@ -19,8 +19,8 @@ header .navbar{
     border-radius:18px;
     font-size:1.3rem
 }
-.form-login h1,.form-criar-conta h1{
-    font-size:3.6rem;
+.form-login h1,.form-criar-conta h1, .form-criar-conta h2{
+    font-size:2.9rem;
     color:#1f2840;
     word-spacing: 3px!important;
     font-weight: 900;
