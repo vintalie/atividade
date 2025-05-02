@@ -1,0 +1,12 @@
+<% if(session.tipo == 'clinica'){ %>
+    <% if(data.search.length == 0){ %>
+        <h3>Não existem emergencias pendentes<h3>
+        <p>Aguarde até que uma emergencia esteja disponivel em seu estado</p>
+    <% }else{
+        data.search.forEach((el) => { %>
+            <%- el.titulo %>
+        <% })
+    }
+}else {%>
+
+<% } %>

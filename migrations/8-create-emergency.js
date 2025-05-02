@@ -2,41 +2,33 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Users', {
+    await queryInterface.createTable('Emergencies', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      email: {
+      titulo: {
+        allowNull:false,
+        type: Sequelize.STRING
+      },
+      descricao: {
+        allowNull:false,
+        type: Sequelize.STRING
+      },
+      localizacao: {
+        references: {model:'Addresses',key:'id'},
+        type: Sequelize.INTEGER
+      },
+      id_pet: {
+        references: {model:'Pets',key:'id'},
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER
       },
-      nome: {
-        type: Sequelize.STRING
-      },
-      senha: {
-        allowNull: false,
-        type: Sequelize.STRING
-      },
-      celular: {
-        type: Sequelize.STRING
-      },
-      endereco: {
-        type: Sequelize.STRING
-      },
-      complemento: {
-        type: Sequelize.STRING
-      },
-      cidade: {
-        type: Sequelize.STRING
-      },
-      estado: {
-        type: Sequelize.STRING
-      },
-      cep: {
-        type: Sequelize.STRING
+      id_clinica: {
+        references: {model:'Pets',key:'id'},
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
@@ -47,8 +39,9 @@ module.exports = {
         type: Sequelize.DATE
       }
     });
+    
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Users');
+    await queryInterface.dropTable('Emergencies');
   }
 };

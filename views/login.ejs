@@ -24,15 +24,18 @@
                     <a href="#"><i>Esqueceu a senha?</i></a>
                 </div>
                 <div class="col-4 text-end">
-                    <% if (typeof aviso !== 'undefined') { %>
+                    
+                    <button type="submit" class="btn btn-primary" style="padding:8px 24px">Entrar</button>
+                </div>
+                <% if (typeof aviso !== 'undefined') { %>
+                    <div class="col-12">
                         <div class="alert alert-danger d-flex align-items-center" role="alert">
                             <div>
                                 <%- aviso %>
                             </div>
                         </div>
-                    <% } %>
-                    <button type="submit" class="btn btn-primary" style="padding:8px 24px">Entrar</button>
-                </div>
+                    </div>
+                <% } %>
                 <div class="col-12">
                     <p align="center"><i>Ainda não possui uma conta?</i> <a href="/criar-conta"><b>Criar Conta</b></a></p>
                 </div>

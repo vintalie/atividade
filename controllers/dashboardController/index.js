@@ -1,9 +1,18 @@
+const User = require('../../models').User
+const Emergency = require('../../models').Emergency
 
 module.exports = {
-    get: function(req, res) {
-        return res.render('dashboard')
-    },
-    post: function(req, res) {
-        return res.send('Rota POST')
+    get: async function(req, res) {
+        let user = await User.findOne({where:{email:req.session.email}})
+        let userData = user.dataValues
+        if(userData.tipo == 'clinica'){
+            userData.clinica = await user.getClinica()
+        }
+        if(userData.tipo == 'cliente'){
+            userData.cliente = await user.getCliente()
+        }
+        
+        return res.render('dashboard', {session: req.session,data:{...userData, page:'dashboard'}})
+
     }
 }
