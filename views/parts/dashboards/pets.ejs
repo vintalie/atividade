@@ -1,0 +1,59 @@
+<%- include('../aviso') %>
+    <% if(data.pets != undefined){ %>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Data de nascimento</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% if(data.pets.length != 0){ %>
+            <% data.pets.forEach((el) => { %>
+                <tr>
+                    <th scope="row">
+                        <%- el.id %>
+                    </th>
+                    <td>
+                        <%- el.nm_pet %>
+                    </td>
+                    <td>
+                        <%- el.descricao %>
+                    </td>
+                    <td>
+                        <%- el.dt_nascimento %>
+                    </td>
+                </tr>
+                <% }) %>
+            <% } %>
+            </tbody>
+        </table>
+    <% } %>
+
+<% if(session.tipo == 'clinica'){ %>
+ 
+
+<% } else { %>
+    <form method="POST" class="row container g-4 ">
+        <div class="col-12">
+            <label for="nm_pet">Nome do Pet</label>
+            <input name="nm_pet" class="form-control" type="text">
+        </div>
+        <div class="col-12">
+            <label for="dt_nascimento">Data de Nascimento</label>
+            <input name="dt_nascimento" class="form-control" type="date"></input> 
+        </div>
+        <div class="col-12">
+            <label for="descricao">Observações</label>
+            <textarea name="descricao" class="form-control" type="text"></textarea> 
+        </div>
+        <div class="col-12 d-flex align-items-end justify-content-end">
+            <button class="btn btn-primary" type="submit">Adicionar Pet</button>
+        </div>
+
+    
+    </form>
+
+<% } %>

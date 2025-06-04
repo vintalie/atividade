@@ -1,11 +1,12 @@
 const User = require("../../models").User
-const CLient = require("../../models").Client
+const Client = require("../../models").Client
 const Clinic = require("../../models").Clinic
 
 
 module.exports = {
     logout: function(req,res){
         delete req.session.email
+        delete req.session.id_user
         delete req.session.role
         res.redirect('/')
     },
@@ -29,9 +30,13 @@ module.exports = {
             },
         })
         if(user != undefined){
-            if(user.senha == req.body.senha){
+            if(user.senha == req.body.senha){                
+                req.session.id_user = user.id
                 req.session.email= user.email
                 req.session.tipo = user.tipo
+
+                
+
                 res.redirect('dashboard')
             }else{
                 err = true

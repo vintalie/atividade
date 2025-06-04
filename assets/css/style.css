@@ -20,8 +20,20 @@ header .navbar{
     font-size:1.3rem
 }
 .form-login h1,.form-criar-conta h1, .form-criar-conta h2{
-    font-size:2.9rem;
+    font-size:2.5rem;
     color:#1f2840;
     word-spacing: 3px!important;
     font-weight: 900;
+}
+main.entrar{
+    background-image: url('/img/entrar-background.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+main.criar-conta{
+    background-image: url('/img/cadastro-background.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }

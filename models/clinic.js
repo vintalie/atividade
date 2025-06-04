@@ -16,6 +16,9 @@ module.exports = (sequelize, DataTypes) => {
       Clinic.hasMany(models.Emergency,{
         foreignKey:'id_clinica'
       })
+      Clinic.belongsTo(models.Address, {
+        foreignKey:'id'
+      })
     }
   }
   Clinic.init({

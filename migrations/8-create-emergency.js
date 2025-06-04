@@ -13,7 +13,7 @@ module.exports = {
         allowNull:false,
         type: Sequelize.STRING
       },
-      descricao: {
+      sintomas: {
         allowNull:false,
         type: Sequelize.STRING
       },
@@ -27,7 +27,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       id_clinica: {
-        references: {model:'Pets',key:'id'},
+        references: {model:'Clinics',key:'id'},
         type: Sequelize.INTEGER
       },
       createdAt: {

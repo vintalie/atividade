@@ -12,9 +12,9 @@ module.exports = {
       nm_endereco: {
         type: Sequelize.STRING
       },
-      id_bairro: {
+      id_cidade: {
         type: Sequelize.INTEGER,
-        references:{model:'Citys', key: 'id'}
+        references:{model:'Cities', key: 'id'}
       },
       createdAt: {
         allowNull: false,

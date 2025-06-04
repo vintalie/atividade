@@ -17,7 +17,7 @@ app.use(session({
     resave:true,
     saveUninitialized:true,
 }))
-// Enable parsing of JSON request bodies
+// habilitando separação do json
 app.use(express.json());
 
 // Enable parsing of URL-encoded request bodies

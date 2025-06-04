@@ -1,12 +1,77 @@
+<%- include('../aviso') %>
+
 <% if(session.tipo == 'clinica'){ %>
-    <% if(data.search.length == 0){ %>
-        <h3>Não existem emergencias pendentes<h3>
-        <p>Aguarde até que uma emergencia esteja disponivel em seu estado</p>
-    <% }else{
-        data.search.forEach((el) => { %>
-            <%- el.titulo %>
-        <% })
-    }
-}else {%>
+           <% if(typeof data.emergencia !=undefined || data.emergencia.length != 1){ %>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">titulo</th>
+                <th scope="col">Sintomas</th>
+                <th scope="col">Localização</th>
+                <th scope="col">Pet</th>
+            </tr>
+        </thead>
+        <tbody>
+                <% data.emergencia.forEach((el) => { %>
+            <tr>
+                <th scope="row">
+                    <%- el.id %>
+                </th>
+                <td>
+                    <%- el.titulo %>
+                </td>
+                <td>
+                    <%- el.sintomas %>
+                </td>
+                <td>
+                    <%- el.localizacao %>
+                </td>
+                <td>
+                </td>
+                <% }) %>
+            </tr>
+        </tbody>
+    </table>
+<% } } else { %>
+    <form method="POST" class="row container g-4 ">
+        <div class="col-12">
+            <label for="titulo">Titulo</label>
+            <input name="titulo" class="form-control" type="text">
+        </div>
+        <div class="col-12">
+            <label for="sintomas">Sintomas</label>
+            <textarea name="sintomas" class="form-control" type="text"></textarea> 
+        </div>
+        <div class="col-6">
+            <select placeholder="Pet" name="id_pet" id="inputState"
+                <div class="form-select">
+                <option selected>Pet</option>
+                <% if(typeof pets != undefined || pets.length != 0) { %>
+                    <% data.pets.forEach((el) => { %>
+                        <option value="<%- el.id %>""><%- el.nm_pet %></option>
+                    <% }) %>
+                <% } %>
+            </select>
+        </div>
+
+        <div class="col-6">
+            <select placeholder="Estado" name="Estado" id="inputState"
+                class="form-select">
+                <% if(typeof estados != undefined || estados.length != 0) { %>
+                    <% data.estados.forEach((el) => { %>
+                        <option <% if(el.selected) { %>
+                                selected
+                            <% } %> value="<%- el.id %>""><%- el.nm_estado %></option>
+                    <% }) %>
+                <% } %>
+            </select>
+        </div>
+        <div class="col-12 d-flex align-items-end justify-content-end">
+            <button class="btn btn-primary" type="submit">Gerar Emergencia</button>
+        </div>
+
+    
+    </form>
 
 <% } %>

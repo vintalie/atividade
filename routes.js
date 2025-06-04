@@ -7,6 +7,7 @@ const loginController = require('./controllers/loginController');
 const registerController = require('./controllers/registerController');
 const dashboardController = require('./controllers/dashboardController');
 const emergenciesController = require('./controllers/emergenciesController');
+const petsController = require('./controllers/petsController/index.js');
 
 
 router.get('/', homeController.get)
@@ -22,9 +23,13 @@ router.get('/dashboard', protected, dashboardController.get )
 
 router.get('/dashboard/emergencias', protected, emergenciesController.get)
 router.get('/dashboard/emergencia/:id', protected, emergenciesController.get)
-router.get('/dashboard/emergencias', protected, emergenciesController.post)
-router.get('/dashboard/emergencias', protected, emergenciesController.put)
-router.get('/dashboard/emergencias', protected, emergenciesController.delete)
+router.post('/dashboard/emergencias', protected, emergenciesController.post)
+router.put('/dashboard/emergencias', protected, emergenciesController.put)
+router.delete('/dashboard/emergencias', protected, emergenciesController.delete)
+
+router.get('/dashboard/pets', protected, petsController.get)
+router.post('/dashboard/pets', protected, petsController.post)
+
 // router.get('/musica', musicaController.get)
 // router.get('/integrantes', integrantesController.get)
 

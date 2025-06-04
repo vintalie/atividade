@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <main>
+    <main class="criar-conta">
         <section>
             <div class="container pt-4 pb-4  d-flex align-items-center justify-content-center"
                 style="min-height:100vh;">
@@ -27,7 +27,7 @@
                                 <div class="carousel-inner form-criar-conta">
                                     <div class="carousel-item active">
                                         <div class="container d-flex row flex-row g-4"
-                                            style="margin:auto;min-height:552px;">
+                                            style="margin:auto;min-height:482px;">
                                             <h1 align="center">Criar Conta</h1>
                                             <div class="col-md-12">
                                                 <input placeholder="Nome" type="text" class="form-control"
@@ -42,14 +42,7 @@
                                                     id="inputPassword4" name="senha">
                                             </div>
 
-                                            <div class="col-md-4">
-                                                <input placeholder="+__" type="text" class="form-control" id="celular"
-                                                    name="celular">
-                                            </div>
-                                            <div class="col-md-8">
-                                                <input placeholder="Celular" type="text" class="form-control"
-                                                    id="celular" name="celular">
-                                            </div>
+
                                             <div class="col-6">
                                                 <i>Você é um:</i>
                                             </div>
@@ -78,27 +71,40 @@
                                     </div>
                                     <div class="carousel-item">
                                         <div class="container d-flex row flex-row g-4 "
-                                            style="margin:auto;min-height:552px;">
-                                            <div class="container row p-0" style="margin:auto;max-height:290px;"">
-                                                <h2 align="center">Endereço</h2>
+                                            style="margin:auto;min-height:482px;">
+                                            <div class="container row p-0" style="margin:auto;min-height:290px;"">
+                                                <h2 align=" center">Endereço</h2>
                                                 <div class="col-12">
-                                                    <input placeholder="Endereco" name="endereco" type="text" class="form-control" id="endereco"
+                                                    <input placeholder="Endereco" name="nm_endereco" type="text"
+                                                        class="form-control" id="endereco"
                                                         placeholder="Apartment, studio, or floor">
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <input placeholder="Cidade" name="cidade" type="text" class="form-control" id="cidade">
+                                                    <input placeholder="Cidade" name="cidade" type="text"
+                                                        class="form-control" id="cidade">
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <select placeholder="Estado" name="estado" id="inputState" class="form-select">
-                                                        <option selected>Escolha</option>
-                                                        <option>...</option>
+                                                    <select placeholder="Estado" name="estado" id="inputState"
+                                                        class="form-select">
+                                                        <option selected>Estado</option>
+                                                        <% data.estados.forEach((el) => { %>
+                                                            <option value="<%- el.id %>""><%- el.sg_estado %></option>
+                                                        <% }) %>
                                                     </select>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <input placeholder="+__" type="text" class="form-control"
+                                                        id="celular" name="celular">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <input placeholder="Celular" type="text" class="form-control"
+                                                        id="celular" name="celular">
                                                 </div>
                                             </div>
 
-                                                <div class="col-12 text-end">
-                                                    <button type="submit" class="btn btn-primary">Criar Conta</button>
-                                                </div>
+                                            <div class="col-12 text-end">
+                                                <button type="submit" class="btn btn-primary">Criar Conta</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

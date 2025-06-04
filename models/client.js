@@ -13,10 +13,13 @@ module.exports = (sequelize, DataTypes) => {
       Client.hasOne(models.User, {
         foreignKey:"id"
       })
+      
       Client.hasOne(models.Address, {
         foreignKey:"id"
       })
-      Client.hasMany(models.Pet)
+      Client.hasMany(models.Pet, {
+        foreignKey:'id_cliente'
+      })
     }
   }
   Client.init({

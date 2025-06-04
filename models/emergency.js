@@ -10,17 +10,20 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
+      Emergency.hasOne(models.Address, {
+        foreignKey: 'id'
+      })
       Emergency.belongsTo(models.Clinic, {
         foreignKey:'id_clinica'
       })
       Emergency.hasOne(models.Pet, {
-        foreignKey: 'id_pet'
+        foreignKey: 'id'
       })
     }
   }
   Emergency.init({
     titulo: DataTypes.STRING,
-    descricao: DataTypes.STRING,
+    sintomas: DataTypes.STRING,
     localizacao: DataTypes.STRING,
     id_pet: DataTypes.INTEGER,
     id_clinica: DataTypes.INTEGER
