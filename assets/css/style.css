@@ -37,3 +37,7 @@ main.criar-conta{
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.login-btn, .login-btn:active{
+    color:#1f1f1f 
+}
