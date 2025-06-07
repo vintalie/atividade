@@ -1,0 +1,120 @@
+/* Header fixo no topo com gradiente */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1040;
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 30%, #00c6fb 100%);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10), 0 1.5px 0 rgba(0,0,0,0.03);
+  transition: box-shadow 0.2s;
+}
+
+/* Navbar customizada */
+.navbar {
+  padding: 0.5rem 1rem;
+  background: transparent;
+}
+
+.logo {
+  height: 48px;
+  width: auto;
+  margin-left: 8px;
+}
+
+.login-btn {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 16px;
+  transition: color 0.2s;
+}
+.login-btn:hover {
+  color: #ffe066;
+}
+
+/* Offcanvas customizado */
+.offcanvas {
+  background: linear-gradient(120deg, #e6fcf7 0%, #f2faff 100%);
+  color: #1f2840;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+  box-shadow: 2px 0 16px rgba(56, 249, 215, 0.10);
+  padding-top: 24px;
+}
+
+.offcanvas-header {
+  border-bottom: 1px solid #38f9d7;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.offcanvas-title {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #00c6fb;
+  letter-spacing: 1px;
+}
+
+.offcanvas-body {
+  padding: 0 18px 18px 18px;
+}
+
+.offcanvas .nav,
+.offcanvas ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.offcanvas .nav-link,
+.offcanvas ul li a {
+  display: block;
+  padding: 12px 0;
+  color: #1f2840;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.offcanvas .nav-link:hover,
+.offcanvas ul li a:hover {
+  background: #38f9d7;
+  color: #fff;
+}
+
+.offcanvas .btn-close {
+  filter: invert(50%);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .logo {
+    height: 36px;
+  }
+  .navbar {
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .offcanvas {
+    border-radius: 0;
+    padding-top: 12px;
+  }
+  .offcanvas-title {
+    font-size: 1.1rem;
+  }
+}
+
+/* Esconde os links horizontais em telas pequenas, mostra em grandes */
+@media (max-width: 991.98px) {
+  .navbar-nav.d-none.d-lg-flex {
+    display: none !important;
+  }
+}
+/* Mostra os links horizontais em telas grandes */
+@media (min-width: 992px) {
+  .navbar-nav.d-none.d-lg-flex {
+    display: flex !important;
+  }
+}

@@ -5,14 +5,12 @@
 
 <script src="/socket.io/socket.io.js"></script>
 <script>
-var io = io()
+var socket = io();
 
 // Registrar como veterinário quando logado
 function emergencyNotification(userId) {
-  socket.on('emergency-clinic', { userId }, () => {
-    console.log('teste')
+  socket.on('emergency-clinic', function(data) {
+    console.log('Notificação de emergência recebida:', data);
   });
 }
-
-
 </script>

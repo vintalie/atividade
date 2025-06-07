@@ -6,13 +6,12 @@ module.exports = {
         let user = await User.findOne({where:{email:req.session.email}})
         let userData = user.dataValues
         if(userData.tipo == 'clinica'){
-            userData.clinica = await user.getClinica()
+            userData.clinica = await user.getClinica() || {};
         }
         if(userData.tipo == 'cliente'){
-            userData.cliente = await user.getCliente()
+            userData.cliente = await user.getCliente() || {};
         }
         
-        return res.render('dashboard', {session: req.session,data:{...userData, page:'dashboard'}})
-
+        return res.render('dashboard', {session: req.session, data: {...userData, page:'dashboard'}})
     }
 }

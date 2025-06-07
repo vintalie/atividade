@@ -1,4 +1,4 @@
-<h2>Ola, <%- data.cliente.nome %></h2>
+<h2>Ola, <%- data.cliente && data.cliente.nome ? data.cliente.nome : 'Cliente' %></h2>
 <h3>Essa é uma pagina do cliente</h3>
 <p>Seu pet está passando por complicações?</p>
 <a class="btn btn-primary" href="/dashboard/emergencias">Crie uma consulta</a>

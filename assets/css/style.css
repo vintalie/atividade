@@ -1,43 +1,211 @@
-header .navbar{
-    background-color:#43c3dd!important
-}
+/* Formulários com visual calmo e moderno */
 .form-login, .form-criar-conta {
-    padding:32px;
-    border-radius: 32px;
-    box-shadow: 0px 1px 12px rgba(0,0,0,.4);
-    background-color: #f2faff;;
+    padding: 32px;
+    border-radius: 28px;
+    box-shadow: 0 4px 24px rgba(56, 249, 215, 0.10), 0 1.5px 0 rgba(0,198,251,0.06);
+    background: rgba(240, 255, 252, 0.97);
+    border: 1.5px solid #38f9d7;
+    margin-bottom: 32px;
 }
-.form-criar-conta [type="text"], .form-criar-conta select, .form-criar-conta [type="password"], .form-criar-conta [type="email"],.form-login [type="text"], .form-login [type="password"], .form-login [type="email"] /*Fala que foi IA que fez isso daqui q eu cometo um crime de odio*/{
-    border-radius:40px;
-    background-color: #f2faff;;
-    border:solid 4px #004a94;
-    padding:12px;
+
+/* Campos dos formulários */
+.form-criar-conta [type="text"], 
+.form-criar-conta select, 
+.form-criar-conta [type="password"], 
+.form-criar-conta [type="email"],
+.form-login [type="text"], 
+.form-login [type="password"], 
+.form-login [type="email"] {
+    border-radius: 24px;
+    background: #e6fcf7;
+    border: 2.5px solid #43e97b;
+    padding: 12px 18px;
+    color: #1f2840;
+    font-size: 1.1rem;
+    transition: border 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 6px rgba(56, 249, 215, 0.06);
 }
-.form-login .btn, .form-criar-conta .btn{
-    background-color:#004a94;
-    color:white;
-    border-radius:18px;
-    font-size:1.3rem
+
+.form-criar-conta [type="text"]:focus, 
+.form-criar-conta select:focus, 
+.form-criar-conta [type="password"]:focus, 
+.form-criar-conta [type="email"]:focus,
+.form-login [type="text"]:focus, 
+.form-login [type="password"]:focus, 
+.form-login [type="email"]:focus {
+    border-color: #00c6fb;
+    outline: none;
+    box-shadow: 0 0 0 2px #38f9d7;
 }
-.form-login h1,.form-criar-conta h1, .form-criar-conta h2{
-    font-size:2.5rem;
-    color:#1f2840;
-    word-spacing: 3px!important;
-    font-weight: 900;
+
+/* Botões */
+.form-login .btn, .form-criar-conta .btn {
+    background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+    color: #fff;
+    border-radius: 18px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    padding: 10px 32px;
+    box-shadow: 0 2px 8px rgba(56, 249, 215, 0.10);
+    transition: background 0.2s, color 0.2s;
 }
-main.entrar{
-    background-image: url('/img/entrar-background.png');
+.form-login .btn:hover, .form-criar-conta .btn:hover {
+    background: linear-gradient(90deg, #00c6fb 0%, #43e97b 100%);
+    color: #fff;
+}
+
+/* Títulos */
+.form-login h1, .form-criar-conta h1, .form-criar-conta h2 {
+    font-size: 2.3rem;
+    color: #1f2840;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+
+/* Fundo dos mains */
+main.entrar {
+    background: linear-gradient(120deg, #e6fcf7 0%, #f2faff 100%);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
 }
-main.criar-conta{
-    background-image: url('/img/cadastro-background.png');
+main.criar-conta {
+    background: linear-gradient(120deg, #f2faff 0%, #e6fcf7 100%);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.login-btn, .login-btn:active{
-    color:#1f1f1f 
+/* Botão de login */
+.login-btn, .login-btn:active {
+    color: #00c6fb;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+.login-btn:hover {
+    color: #43e97b;
+}
+
+/* Alertas */
+.alert-danger {
+    background: #ffeaea;
+    color: #b30000;
+    border: 1.5px solid #ffb3b3;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .form-login, .form-criar-conta {
+        padding: 18px;
+        border-radius: 18px;
+    }
+    .form-login h1, .form-criar-conta h1, .form-criar-conta h2 {
+        font-size: 1.5rem;
+    }
+}
+/* Página inicial - index.ejs */
+
+body {
+    background: linear-gradient(120deg, #e6fcf7 0%, #f2faff 100%);
+    min-height: 100vh;
+}
+
+main {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    width: 100%;
+    padding: 40px 0;
+}
+
+.index-intro {
+    background: rgba(255,255,255,0.92);
+    border-radius: 28px;
+    box-shadow: 0 4px 24px rgba(56, 249, 215, 0.10), 0 1.5px 0 rgba(0,198,251,0.06);
+    padding: 36px 32px;
+    margin-bottom: 32px;
+    max-width: 560px;
+}
+
+.index-intro h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2840;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+
+.index-intro p {
+    font-size: 1.15rem;
+    color: #2e3a4d;
+    margin-bottom: 28px;
+    line-height: 1.6;
+}
+
+.index-intro .btn-primary {
+    background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+    border: none;
+    border-radius: 18px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    padding: 12px 32px;
+    box-shadow: 0 2px 8px rgba(56, 249, 215, 0.10);
+    transition: background 0.2s, color 0.2s;
+}
+.index-intro .btn-primary:hover {
+    background: linear-gradient(90deg, #00c6fb 0%, #43e97b 100%);
+    color: #fff;
+}
+
+.index-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.index-img img {
+    max-width: 500px;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(56, 249, 215, 0.13);
+    border: 2.5px solid #38f9d7;
+    background: #fff;
+}
+
+@media (max-width: 900px) {
+    .container.d-flex.align-items-start.justify-content-center {
+        flex-direction: column;
+        align-items: center !important;
+        justify-content: flex-start !important;
+    }
+    .index-img img {
+        max-width: 90vw;
+        margin-top: 24px;
+    }
+    .index-intro {
+        max-width: 98vw;
+        padding: 24px 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        padding: 16px 0;
+    }
+    .index-intro h3 {
+        font-size: 1.2rem;
+    }
+    .index-img img {
+        max-width: 98vw;
+        border-radius: 14px;
+    }
 }
