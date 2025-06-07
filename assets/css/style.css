@@ -216,6 +216,12 @@ section {
     }
 }
 
+.dashboard-page{
+    background-color: white;
+    padding:20px;
+    
+}
+
 .sidebar{
     background: linear-gradient(90deg, #00c6fb 0%, #43e97b 100%);
 }
