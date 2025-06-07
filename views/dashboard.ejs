@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <main class="row">
+    <main class="row container m-auto dashboard">
         <%- include('parts/dashboards/sidebar') %>
         <div class="col-auto">
 
@@ -20,8 +20,22 @@
                 <% page = 'parts/dashboards/' + data.page %>
                 <%- include(page) %>
             <% } %>
+
         </div>
     </main>
 </body>
+<% if(session.tipo == "clinica"){ %>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io();
+
+        // Registrar como veterinário quando logado
+        function emergencyNotification(userId) {
+        socket.on('emergency-clinic', function(data) {
+            console.log('Notificação de emergência recebida:', data);
+        });
+        }
+    </script>
+<% } %>
 
 </html>
