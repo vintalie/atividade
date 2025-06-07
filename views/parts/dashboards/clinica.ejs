@@ -3,14 +3,3 @@
 <p>Talvez você queira verificar as consultas pendentes não?</p>
 <a class="btn btn-primary" href="/dashboard/emergencias">Verificar Consulta</a>
 
-<script src="/socket.io/socket.io.js"></script>
-<script>
-var socket = io();
-
-// Registrar como veterinário quando logado
-function emergencyNotification(userId) {
-  socket.on('emergency-clinic', function(data) {
-    console.log('Notificação de emergência recebida:', data);
-  });
-}
-</script>
