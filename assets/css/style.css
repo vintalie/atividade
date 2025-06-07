@@ -112,14 +112,20 @@ main.criar-conta {
 
 body {
     background: linear-gradient(120deg, #e6fcf7 0%, #f2faff 100%);
-    min-height: 100vh;
 }
 
 main {
-    min-height: 80vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    max-width:100%;
+    padding: 0!important;
+}
+main.dashboard{
+    margin-top:8px !important;
+    border-radius:30px;
+    border: solid 1px rgb(201, 201, 201);
+    overflow:hidden;
+    box-shadow:12px 12px 25px rgba(131, 131, 131, 0.199)
 }
 
 section {
@@ -208,4 +214,8 @@ section {
         max-width: 98vw;
         border-radius: 14px;
     }
+}
+
+.sidebar{
+    background: linear-gradient(90deg, #00c6fb 0%, #43e97b 100%);
 }
