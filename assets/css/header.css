@@ -1,4 +1,5 @@
 /* Header fixo no topo com gradiente */
+/* Mantém o header sempre visível no topo, com gradiente verde-água para azul, sombra suave e transição de sombra */
 header {
   position: sticky;
   top: 0;
@@ -9,28 +10,35 @@ header {
 }
 
 /* Navbar customizada */
+/* Ajusta o espaçamento interno da navbar e mantém o fundo transparente para mostrar o gradiente */
 .navbar {
   padding: 0.2rem 1rem;
   background: transparent;
 }
 
+/* Logo */
+/* Define tamanho e espaçamento lateral para a logo */
 .logo {
   height: 48px;
   width: auto;
   margin-left: 8px;
 }
 
+/* Botão de login */
+/* Estiliza o botão de login: cor branca, sem sublinhado, espaçamento e efeito de transição */
 .login-btn {
   color: #fff;
   text-decoration: none;
   margin-left: 16px;
   transition: color 0.2s;
 }
+/* Cor amarela suave ao passar o mouse no botão de login */
 .login-btn:hover {
   color: #ffe066;
 }
 
 /* Offcanvas customizado */
+/* Estiliza o menu lateral (offcanvas) com gradiente suave, cor de texto escura, bordas arredondadas e sombra */
 .offcanvas {
   background: linear-gradient(120deg, #e6fcf7 0%, #f2faff 100%);
   color: #1f2840;
@@ -40,12 +48,16 @@ header {
   padding-top: 24px;
 }
 
+/* Cabeçalho do offcanvas */
+/* Linha divisória, espaçamento inferior e margem para separar o título do conteúdo */
 .offcanvas-header {
   border-bottom: 1px solid #38f9d7;
   padding-bottom: 12px;
   margin-bottom: 16px;
 }
 
+/* Título do offcanvas */
+/* Título em azul, negrito, espaçado e maior */
 .offcanvas-title {
   font-weight: bold;
   font-size: 1.3rem;
@@ -53,10 +65,14 @@ header {
   letter-spacing: 1px;
 }
 
+/* Corpo do offcanvas */
+/* Espaçamento interno para o conteúdo do menu lateral */
 .offcanvas-body {
   padding: 0 18px 18px 18px;
 }
 
+/* Lista de navegação do offcanvas */
+/* Remove marcadores e espaçamentos padrão das listas */
 .offcanvas .nav,
 .offcanvas ul {
   list-style: none;
@@ -64,6 +80,8 @@ header {
   margin: 0;
 }
 
+/* Links do menu lateral */
+/* Links em bloco, com padding, cor escura, fonte maior, arredondados e efeito de transição */
 .offcanvas .nav-link,
 .offcanvas ul li a {
   display: block;
@@ -76,17 +94,21 @@ header {
   transition: background 0.2s, color 0.2s;
 }
 
+/* Efeito hover nos links do menu lateral */
+/* Fundo azul-água e texto branco ao passar o mouse */
 .offcanvas .nav-link:hover,
 .offcanvas ul li a:hover {
   background: #38f9d7;
   color: #fff;
 }
 
+/* Botão de fechar do offcanvas */
+/* Deixa o botão de fechar mais visível em fundos claros */
 .offcanvas .btn-close {
   filter: invert(50%);
 }
 
-/* Responsividade */
+/* Responsividade para logo e navbar em telas menores */
 @media (max-width: 768px) {
   .logo {
     height: 36px;
@@ -96,6 +118,8 @@ header {
   }
 }
 
+/* Responsividade para offcanvas em telas muito pequenas */
+/* Remove bordas arredondadas e diminui o título */
 @media (max-width: 600px) {
   .offcanvas {
     border-radius: 0;
@@ -107,6 +131,7 @@ header {
 }
 
 /* Esconde os links horizontais em telas pequenas, mostra em grandes */
+/* Garante que o menu horizontal só aparece em telas grandes */
 @media (max-width: 991.98px) {
   .navbar-nav.d-none.d-lg-flex {
     display: none !important;

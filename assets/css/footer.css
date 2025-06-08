@@ -1,3 +1,5 @@
+/* FOOTER PRINCIPAL */
+/* Define o fundo do footer com um gradiente azul, cor do texto branca, espaçamento interno, sombra suave para destaque, margem superior e largura total */
 footer {
   background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);
   color: #fff;
@@ -7,12 +9,16 @@ footer {
   width: 100%;
 }
 
+/* BLOCO DE INTEGRANTES */
+/* Centraliza o bloco de integrantes, limita a largura e alinha o texto ao centro */
 footer .integrantes {
   max-width: 400px;
   margin: 0 auto;
   text-align: center;
 }
 
+/* TÍTULO DOS INTEGRANTES */
+/* Deixa o título maior, espaçado, em negrito, branco e com leve sombra para destaque */
 footer .integrantes h3 {
   font-size: 1.5rem;
   margin-bottom: 16px;
@@ -22,12 +28,16 @@ footer .integrantes h3 {
   text-shadow: 0 2px 8px rgba(0,0,0,0.10);
 }
 
+/* LISTA DE INTEGRANTES */
+/* Remove marcadores, espaçamento padrão e adiciona espaçamento inferior */
 footer .integrantes ul {
   list-style: none;
   padding: 0;
   margin: 0 0 18px 0;
 }
 
+/* ITENS DA LISTA DE INTEGRANTES */
+/* Espaçamento entre nomes, tamanho e peso da fonte, e leve espaçamento entre letras */
 footer .integrantes li {
   margin-bottom: 6px;
   font-size: 1.1rem;
@@ -35,6 +45,8 @@ footer .integrantes li {
   letter-spacing: 0.5px;
 }
 
+/* AGRADECIMENTO */
+/* Destaca o agradecimento com cor amarela, fundo levemente escuro, bordas arredondadas, sombra e transição suave */
 footer .agradecimento {
   margin-top: 28px;
   font-size: 1.2rem;
@@ -48,11 +60,15 @@ footer .agradecimento {
   transition: background 0.3s;
 }
 
+/* AGRADECIMENTO HOVER */
+/* Ao passar o mouse, o fundo fica mais claro e o texto branco para maior destaque */
 footer .agradecimento:hover {
   background: rgba(255,255,255,0.18);
   color: #fff;
 }
 
+/* RESPONSIVIDADE */
+/* Ajusta o espaçamento e tamanho dos textos em telas pequenas para melhor visualização em dispositivos móveis */
 @media (max-width: 600px) {
   footer {
     padding: 24px 0 10px 0;

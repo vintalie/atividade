@@ -1,4 +1,5 @@
 /* Formulários com visual calmo e moderno */
+/* Define aparência dos formulários de login e cadastro: padding, bordas arredondadas, sombra suave, fundo claro, borda azul-água e espaçamento inferior */
 .form-login, .form-criar-conta {
     padding: 32px;
     border-radius: 28px;
@@ -9,6 +10,7 @@
 }
 
 /* Campos dos formulários */
+/* Campos de texto, senha, email e selects com bordas arredondadas, fundo suave, borda azul-água, padding confortável e cor de texto escura */
 .form-criar-conta [type="text"], 
 .form-criar-conta select, 
 .form-criar-conta [type="password"], 
@@ -26,6 +28,8 @@
     box-shadow: 0 1px 6px rgba(56, 249, 215, 0.06);
 }
 
+/* Efeito de foco nos campos dos formulários */
+/* Destaca o campo ativo com borda azul e sombra */
 .form-criar-conta [type="text"]:focus, 
 .form-criar-conta select:focus, 
 .form-criar-conta [type="password"]:focus, 
@@ -38,7 +42,8 @@
     box-shadow: 0 0 0 2px #38f9d7;
 }
 
-/* Botões */
+/* Botões dos formulários */
+/* Botões grandes, arredondados, com gradiente verde-água para azul, sombra e transição suave */
 .form-login .btn, .form-criar-conta .btn {
     background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
     color: #fff;
@@ -50,12 +55,14 @@
     box-shadow: 0 2px 8px rgba(56, 249, 215, 0.10);
     transition: background 0.2s, color 0.2s;
 }
+/* Efeito hover nos botões: inverte o gradiente */
 .form-login .btn:hover, .form-criar-conta .btn:hover {
     background: linear-gradient(90deg, #00c6fb 0%, #43e97b 100%);
     color: #fff;
 }
 
-/* Títulos */
+/* Títulos dos formulários */
+/* Títulos grandes, escuros, em negrito e com espaçamento */
 .form-login h1, .form-criar-conta h1, .form-criar-conta h2 {
     font-size: 2.3rem;
     color: #1f2840;
@@ -65,6 +72,7 @@
 }
 
 /* Fundo dos mains */
+/* Gradiente suave para o fundo das páginas de login e cadastro */
 main.entrar {
     background: linear-gradient(120deg, #e6fcf7 0%, #f2faff 100%);
     background-position: center center;
@@ -78,17 +86,20 @@ main.criar-conta {
     background-repeat: no-repeat;
 }
 
-/* Botão de login */
+/* Botão de login no header */
+/* Cor azul, negrito e transição suave */
 .login-btn, .login-btn:active {
     color: #00c6fb;
     font-weight: 600;
     transition: color 0.2s;
 }
+/* Hover do botão de login: verde-água */
 .login-btn:hover {
     color: #43e97b;
 }
 
-/* Alertas */
+/* Alertas de erro */
+/* Fundo vermelho claro, texto vermelho escuro, borda arredondada e espaçamento */
 .alert-danger {
     background: #ffeaea;
     color: #b30000;
@@ -98,7 +109,8 @@ main.criar-conta {
     margin-bottom: 18px;
 }
 
-/* Responsividade */
+/* Responsividade para formulários em telas pequenas */
+/* Reduz padding e tamanho dos títulos */
 @media (max-width: 600px) {
     .form-login, .form-criar-conta {
         padding: 18px;
@@ -108,18 +120,22 @@ main.criar-conta {
         font-size: 1.5rem;
     }
 }
-/* Página inicial - index.ejs */
 
+/* Página inicial - index.ejs */
+/* Fundo suave para toda a página */
 body {
     background: linear-gradient(120deg, #e6fcf7 0%, #f2faff 100%);
 }
 
+/* Main centralizado e sem padding extra */
 main {
     display: flex;
     align-items: center;
     max-width:100%;
     padding: 0!important;
 }
+
+/* Dashboard com borda, sombra e cantos arredondados */
 main.dashboard{
     margin-top:8px !important;
     border-radius:30px;
@@ -128,11 +144,14 @@ main.dashboard{
     box-shadow:12px 12px 25px rgba(131, 131, 131, 0.199)
 }
 
+/* Seção com espaçamento vertical */
 section {
     width: 100%;
     padding: 40px 0;
 }
 
+/* Bloco de introdução da index */
+/* Caixa branca translúcida, arredondada, com sombra e padding confortável */
 .index-intro {
     background: rgba(255,255,255,0.92);
     border-radius: 28px;
@@ -142,6 +161,7 @@ section {
     max-width: 560px;
 }
 
+/* Título da introdução da index */
 .index-intro h3 {
     font-size: 2rem;
     font-weight: 700;
@@ -150,6 +170,7 @@ section {
     letter-spacing: 1px;
 }
 
+/* Parágrafo da introdução da index */
 .index-intro p {
     font-size: 1.15rem;
     color: #2e3a4d;
@@ -157,6 +178,8 @@ section {
     line-height: 1.6;
 }
 
+/* Botão principal da index */
+/* Gradiente verde-água para azul, arredondado, sombra e transição suave */
 .index-intro .btn-primary {
     background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
     border: none;
@@ -167,11 +190,14 @@ section {
     box-shadow: 0 2px 8px rgba(56, 249, 215, 0.10);
     transition: background 0.2s, color 0.2s;
 }
+/* Hover do botão principal: inverte o gradiente */
 .index-intro .btn-primary:hover {
     background: linear-gradient(90deg, #00c6fb 0%, #43e97b 100%);
     color: #fff;
 }
 
+/* Bloco da imagem na index */
+/* Centraliza e adiciona padding */
 .index-img {
     display: flex;
     align-items: center;
@@ -179,6 +205,8 @@ section {
     padding: 24px;
 }
 
+/* Imagem da index */
+/* Limita largura, arredonda, adiciona sombra e borda azul-água */
 .index-img img {
     max-width: 500px;
     border-radius: 24px;
@@ -187,6 +215,8 @@ section {
     background: #fff;
 }
 
+/* Responsividade para index em telas médias */
+/* Coloca os blocos em coluna e ajusta tamanhos */
 @media (max-width: 900px) {
     .container.d-flex.align-items-start.justify-content-center {
         flex-direction: column;
@@ -203,6 +233,8 @@ section {
     }
 }
 
+/* Responsividade para index em telas pequenas */
+/* Reduz padding e tamanho dos títulos e imagens */
 @media (max-width: 600px) {
     section {
         padding: 16px 0;
@@ -216,12 +248,15 @@ section {
     }
 }
 
+/* Página do dashboard */
+/* Fundo branco e padding interno */
 .dashboard-page{
     background-color: white;
     padding:20px;
-    
 }
 
+/* Sidebar do dashboard */
+/* Gradiente azul para verde-água para destacar o menu lateral */
 .sidebar{
     background: linear-gradient(90deg, #00c6fb 0%, #43e97b 100%);
 }
