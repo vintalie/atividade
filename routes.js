@@ -8,6 +8,9 @@ const registerController = require('./controllers/registerController');
 const dashboardController = require('./controllers/dashboardController');
 const emergenciesController = require('./controllers/emergenciesController');
 const petsController = require('./controllers/petsController/index.js');
+const funcionalidadesController = require('./controllers/funcionalidadesController');
+const sobreController = require('./controllers/sobreController');
+const quemSomosController = require('./controllers/quemSomosController');
 
 
 router.get('/', homeController.get)
@@ -30,7 +33,11 @@ router.delete('/dashboard/emergencias', protected, emergenciesController.delete)
 router.get('/dashboard/pets', protected, petsController.get)
 router.post('/dashboard/pets', protected, petsController.post)
 
+router.get('/sobre', sobreController.sobre)
+router.get('/quem-somos', quemSomosController.quemSomos)
+router.get('/funcionalidades', funcionalidadesController.funcionalidades)
+
 // router.get('/musica', musicaController.get)
 // router.get('/integrantes', integrantesController.get)
 
-module.exports = router 
+module.exports = router
