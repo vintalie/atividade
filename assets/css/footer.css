@@ -1,7 +1,7 @@
 /* FOOTER PRINCIPAL */
 /* Define o fundo do footer com um gradiente azul, cor do texto branca, espaçamento interno, sombra suave para destaque, margem superior e largura total */
 footer {
-  background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);
+  background: linear-gradient(90deg, #4898ab 0%, #90d46c 100%);
   color: #fff;
   padding: 40px 0 20px 0;
   box-shadow: 0 -4px 24px rgba(0,0,0,0.10);

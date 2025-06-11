@@ -5,7 +5,7 @@
     border-radius: 28px;
     box-shadow: 0 4px 24px rgba(56, 249, 215, 0.10), 0 1.5px 0 rgba(0,198,251,0.06);
     background: rgba(240, 255, 252, 0.97);
-    border: 1.5px solid #38f9d7;
+    border: 1.5px solid  #90d46c;
     margin-bottom: 32px;
 }
 
@@ -20,7 +20,7 @@
 .form-login [type="email"] {
     border-radius: 24px;
     background: #e6fcf7;
-    border: 2.5px solid #43e97b;
+    border: 2.5px solid #90d46c;
     padding: 12px 18px;
     color: #1f2840;
     font-size: 1.1rem;
@@ -37,9 +37,9 @@
 .form-login [type="text"]:focus, 
 .form-login [type="password"]:focus, 
 .form-login [type="email"]:focus {
-    border-color: #00c6fb;
+    border-color: #4898ab;
     outline: none;
-    box-shadow: 0 0 0 2px #38f9d7;
+    box-shadow: 0 0 0 2px #90d46c;
 }
 
 /* Botões dos formulários */
@@ -74,13 +74,13 @@
 /* Fundo dos mains */
 /* Gradiente suave para o fundo das páginas de login e cadastro */
 main.entrar {
-    background: linear-gradient(120deg, #e6fcf7 0%, #f2faff 100%);
+    
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 main.criar-conta {
-    background: linear-gradient(120deg, #f2faff 0%, #e6fcf7 100%);
+    
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -258,5 +258,169 @@ section {
 /* Sidebar do dashboard */
 /* Gradiente azul para verde-água para destacar o menu lateral */
 .sidebar{
-    background: linear-gradient(90deg, #00c6fb 0%, #43e97b 100%);
+    background: linear-gradient(90deg, #4898ab 0%, #90d46c 100%);
+}
+
+/* Botões principais - novo estilo */
+/* Gradiente azul-escuro para verde-água, borda arredondada, texto branco e transição suave */
+.btn-primary, .form-login .btn, .form-criar-conta .btn, .index-intro .btn-primary {
+  background: linear-gradient(90deg, #4898ab 0%, #90d46c 100%);
+  border: none;
+  border-radius: 18px;
+  color: #fff;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+/* Efeito hover para os botões principais: inverte o gradiente */
+.btn-primary:hover, .form-login .btn:hover, .form-criar-conta .btn:hover, .index-intro .btn-primary:hover {
+  background: linear-gradient(90deg, #90d46c 0%, #4898ab 100%);
+  color: #fff;
+}
+/* Dark Mode: mistura de preto com verde #90d46c */
+body.dark-mode {
+    background: linear-gradient(120deg, #181c1b 0%, #232926 60%, #90d46c 100%) !important;
+    filter: brightness(0.9) contrast(1.05) saturate(0.85);
+    color: #e6ffe6;
+}
+
+html, body {
+    height: 100%;
+    min-height: 100%;
+}
+body {
+    min-height: 100vh;
+}
+
+/* Deixa todas as fontes brancas nas áreas escuras do dark mode */
+body.dark-mode,
+body.dark-mode .form-login,
+body.dark-mode .form-criar-conta,
+body.dark-mode .index-intro,
+body.dark-mode .card,
+body.dark-mode .dashboard-card,
+body.dark-mode footer,
+body.dark-mode .sidebar,
+body.dark-mode .offcanvas {
+    color: #fff !important;
+}
+
+/* Para títulos e textos específicos */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode p,
+body.dark-mode label,
+body.dark-mode span,
+body.dark-mode li,
+body.dark-mode a,
+body.dark-mode .nav-link {
+    color: #fff !important;
+}
+
+/* Formulários em dark mode (eram brancos) */
+body.dark-mode .form-login,
+body.dark-mode .form-criar-conta {
+    background: #232926;
+    border: 1.5px solid #90d46c;
+    color: #e6ffe6;
+}
+
+/* Campos dos formulários em dark mode */
+body.dark-mode .form-criar-conta [type="text"],
+body.dark-mode .form-criar-conta select,
+body.dark-mode .form-criar-conta [type="password"],
+body.dark-mode .form-criar-conta [type="email"],
+body.dark-mode .form-login [type="text"],
+body.dark-mode .form-login [type="password"],
+body.dark-mode .form-login [type="email"] {
+    background: #181c1b !important;
+    border: 2.5px solid #90d46c !important;
+    color: #fff !important;
+}
+
+/* Placeholder dos campos em dark mode */
+body.dark-mode .form-criar-conta [type="text"]::placeholder,
+body.dark-mode .form-criar-conta [type="password"]::placeholder,
+body.dark-mode .form-criar-conta [type="email"]::placeholder,
+body.dark-mode .form-login [type="text"]::placeholder,
+body.dark-mode .form-login [type="password"]::placeholder,
+body.dark-mode .form-login [type="email"]::placeholder {
+    color: #b5d7a8 !important;
+    opacity: 1;
+}
+
+/* Efeito de foco nos campos em dark mode */
+body.dark-mode .form-criar-conta [type="text"]:focus,
+body.dark-mode .form-criar-conta select:focus,
+body.dark-mode .form-criar-conta [type="password"]:focus,
+body.dark-mode .form-criar-conta [type="email"]:focus,
+body.dark-mode .form-login [type="text"]:focus,
+body.dark-mode .form-login [type="password"]:focus,
+body.dark-mode .form-login [type="email"]:focus {
+    border-color: #90d46c !important;
+    background: #232926 !important;
+    color: #fff !important;
+    box-shadow: 0 0 0 2px #90d46c;
+}
+
+/* Bloco de introdução da index (era branco) */
+body.dark-mode .index-intro {
+    background: #232926;
+    color: #e6ffe6;
+}
+
+/* Cards e dashboard (eram brancos) */
+body.dark-mode .card, 
+body.dark-mode .dashboard-card {
+    background: #232926;
+    border: 1.5px solid #90d46c;
+    color: #e6ffe6;
+}
+
+/* Footer (se era branco) */
+body.dark-mode footer {
+    background: #232926;
+    color: #e6ffe6;
+    filter: brightness(0.81);
+    
+}
+
+/* Sidebar (se era branca) */
+body.dark-mode .sidebar {
+    background: #232926;
+    color: #e6ffe6;
+}
+
+/* Offcanvas/menu lateral (se era branco) */
+body.dark-mode .offcanvas {
+    background: #232926;
+    color: #e6ffe6;
+}
+
+/* Links em dark mode */
+body.dark-mode a, 
+body.dark-mode .nav-link {
+    color: #90d46c;
+}
+body.dark-mode a:hover, 
+body.dark-mode .nav-link:hover {
+    color: #fff;
+}
+
+/* Alertas em dark mode */
+body.dark-mode .alert-danger {
+    background: #232926;
+    color: #ff6b6b;
+    border: 1.5px solid #90d46c;
+}
+/* Imagens mais suaves e com menos brilho no modo escuro */
+body.dark-mode img,
+body.dark-mode .index-img img {
+    filter: brightness(0.84) contrast(1.05) saturate(0.85);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.35);
+    background: #232926;
+    border-color: #181c1b;
 }

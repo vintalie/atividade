@@ -4,7 +4,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1040;
-  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 30%, #00c6fb 100%);
+  background: linear-gradient(90deg, #4898ab 0%, #90d46c 100%);
   box-shadow: 0 4px 16px rgba(0,0,0,0.10), 0 1.5px 0 rgba(0,0,0,0.03);
   transition: box-shadow 0.2s;
 }
