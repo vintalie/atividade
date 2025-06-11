@@ -11,6 +11,7 @@ const petsController = require('./controllers/petsController/index.js');
 const funcionalidadesController = require('./controllers/funcionalidadesController');
 const sobreController = require('./controllers/sobreController');
 const quemSomosController = require('./controllers/quemSomosController');
+const configsController = require('./controllers/configsController');
 
 
 router.get('/', homeController.get)
@@ -37,7 +38,14 @@ router.get('/sobre', sobreController.sobre)
 router.get('/quem-somos', quemSomosController.quemSomos)
 router.get('/funcionalidades', funcionalidadesController.funcionalidades)
 
-// router.get('/musica', musicaController.get)
-// router.get('/integrantes', integrantesController.get)
+// Página de configurações
+router.get('/dashboard/configs', protected, configsController.get);
+router.post('/dashboard/configs/alterar', configsController.alterar);
+router.post('/dashboard/configs/excluir', protected, configsController.excluir);
+
+router.get('/dashboard/emergencias/excluir/:id', protected, emergenciesController.excluirGet);
+router.get('/dashboard/emergencias/:id', protected, emergenciesController.get);
+router.post('/dashboard/emergencias/excluir', protected, emergenciesController.excluir);
+
 
 module.exports = router

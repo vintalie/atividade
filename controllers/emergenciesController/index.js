@@ -186,26 +186,38 @@ module.exports = {
                     estados:states,
                     cliente:client,
                     page:'emergencia',
-
-            }})
+                }
+            })
         }else{
             res.render('dashboard', {
                 session:req.session,
+                aviso: 'Emergência enviada à clínica com sucesso!',
                 data:{
                     emergencia:emergency,
                     pets:pets,
                     estados:states,
                     cliente:client,
                     page:'emergencia',
-                    aviso:'emergencia-criada',
-            }})
+                }
+            })
         }
 
-    z},
+    },
     put: function(){
 
     },
     delete:function (){
 
+    },
+    excluir: async function(req, res) {
+        const { id } = req.body;
+        console.log('Chamou excluir emergência:', req.body);
+        await Emergency.destroy({ where: { id } });
+        res.redirect('/dashboard/emergencias');
+    },
+    excluirGet: async function(req, res) {
+        const { id } = req.params;
+        await Emergency.destroy({ where: { id } });
+        res.redirect('/dashboard/emergencias');
     }
 }

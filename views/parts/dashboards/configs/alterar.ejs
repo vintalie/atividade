@@ -1,0 +1,26 @@
+<form method="POST" action="/dashboard/configs/alterar">
+  <div class="mb-3">
+    <label for="nome" class="form-label">Nome</label>
+    <input type="text" class="form-control" id="nome" name="nome" value="<%= (data.usuario && data.usuario.nome) || '' %>" required>
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">E-mail</label>
+    <input type="email" class="form-control" id="email" name="email" value="<%= (data.usuario && data.usuario.email) || '' %>" required>
+  </div>
+  <% if (data.usuario && data.usuario.tipo === 'clinica') { %>
+    <div class="mb-3">
+      <label for="cnpj" class="form-label">CNPJ</label>
+      <input type="text" class="form-control" id="cnpj" name="cnpj" value="<%= (data.usuario && data.usuario.cnpj) || '' %>">
+    </div>
+    <div class="mb-3">
+      <label for="endereco" class="form-label">Endereço</label>
+      <input type="text" class="form-control" id="endereco" name="endereco" value="<%= (data.usuario && data.usuario.endereco) || '' %>">
+    </div>
+  <% } else { %>
+    <div class="mb-3">
+      <label for="celular" class="form-label">Celular</label>
+      <input type="text" class="form-control" id="celular" name="celular" value="<%= (data.usuario && data.usuario.celular) || '' %>">
+    </div>
+  <% } %>
+  <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+</form>

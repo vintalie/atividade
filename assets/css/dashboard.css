@@ -1,0 +1,30 @@
+/* dashboard.css ou style.css */
+.dashboard-main {
+    background: linear-gradient(120deg, #e6fcf7 0%, #f2faff 100%);
+    min-height: 100vh;
+}
+body.dark-mode .dashboard-main {
+    background: #181c1b !important;
+}
+.dashboard-page {
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(56, 249, 215, 0.10);
+    margin: 24px 0;
+    min-height: 90vh;
+    padding: 32px 24px;
+}
+body.dark-mode .dashboard-page {
+    background: #232926 !important;
+    color: #e6ffe6 !important;
+}
+.sidebar {
+    background: linear-gradient(90deg, #4898ab 0%, #90d46c 100%);
+    min-height: 100vh;
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+    box-shadow: 4px 0 24px rgba(56, 249, 215, 0.10);
+}
+body.dark-mode .sidebar {
+    filter: brightness(0.9);
+}

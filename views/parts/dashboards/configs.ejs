@@ -1,0 +1,67 @@
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+<div class="container py-4">
+  <h2 class="mb-4">Configurações da Conta</h2>
+
+  <!-- Alterar dados do usuário -->
+  <form method="POST" action="/dashboards/configs/alterar" class="mb-4">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome" name="nome" value="<%= (data.usuario && data.usuario.nome) || '' %>" required>
+      </div>
+      <div class="col-md-6">
+        <label for="email" class="form-label">E-mail</label>
+        <input type="email" class="form-control" id="email" name="email" value="<%= (data.usuario && data.usuario.email) || '' %>" required>
+      </div>
+      <% if (data.usuario && data.usuario.tipo === 'clinica') { %>
+        <div class="col-md-6">
+          <label for="cnpj" class="form-label">CNPJ</label>
+          <input type="text" class="form-control" id="cnpj" name="cnpj" value="<%= (data.usuario && data.usuario.cnpj) || '' %>">
+        </div>
+        <div class="col-md-6">
+          <label for="endereco" class="form-label">Endereço</label>
+          <input type="text" class="form-control" id="endereco" name="endereco" value="<%= (data.usuario && data.usuario.endereco) || '' %>">
+        </div>
+      <% } else { %>
+        <div class="col-md-6">
+          <label for="celular" class="form-label">Celular</label>
+          <input type="text" class="form-control" id="celular" name="celular" value="<%= (data.usuario && data.usuario.celular) || '' %>">
+        </div>
+      <% } %>
+      <div class="col-12 text-end">
+        <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+      </div>
+    </div>
+  </form>
+
+  <!-- Modo escuro -->
+  <div class="mb-4">
+    <label class="form-label me-2">Modo Escuro:</label>
+    <button id="toggle-dark" class="btn btn-outline-secondary" type="button">
+      <i class="bi bi-moon"></i> Alternar Modo
+    </button>
+  </div>
+  <script>
+    document.getElementById('toggle-dark').addEventListener('click', function() {
+      document.body.classList.toggle('dark-mode');
+      // Salva preferência no localStorage
+      if(document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('dark-mode', 'on');
+      } else {
+        localStorage.setItem('dark-mode', 'off');
+      }
+    });
+    // Aplica modo escuro se já estiver salvo
+    if(localStorage.getItem('dark-mode') === 'on') {
+      document.body.classList.add('dark-mode');
+    }
+  </script>
+
+  <!-- Excluir usuário -->
+  <form method="POST" action="/dashboards/configs/excluir" onsubmit="return confirm('Tem certeza que deseja excluir sua conta?');">
+    <button type="submit" class="btn btn-danger">Excluir Usuário</button>
+  </form>
+</div>

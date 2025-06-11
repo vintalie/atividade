@@ -1,7 +1,5 @@
-<% if (typeof aviso !=='undefined' ) { %>
-<div class="alert alert-danger d-flex align-items-center" role="alert">
-    <div>
-        <%- aviso %>
-    </div>
-</div>
+<% if (typeof aviso !== 'undefined' && aviso) { %>
+  <div class="alert alert-success" role="alert">
+    <%= aviso %>
+  </div>
 <% } %>

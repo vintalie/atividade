@@ -143,3 +143,19 @@ header {
     display: flex !important;
   }
 }
+/* Dropdown em dark mode */
+body.dark-mode .dropdown-menu {
+  background: #232926 !important;
+  color: #fff !important;
+  border: 1px solid #90d46c;
+}
+
+body.dark-mode .dropdown-item {
+  color: #fff !important;
+}
+
+body.dark-mode .dropdown-item:hover,
+body.dark-mode .dropdown-item:focus {
+  background: #4898ab !important;
+  color: #fff !important;
+}

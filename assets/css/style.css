@@ -278,7 +278,7 @@ section {
 }
 /* Dark Mode: mistura de preto com verde #90d46c */
 body.dark-mode {
-    background: linear-gradient(120deg, #181c1b 0%, #232926 60%, #90d46c 100%) !important;
+    background: linear-gradient(106deg, #181c1b 10%, #232926 100%) !important;
     filter: brightness(0.9) contrast(1.05) saturate(0.85);
     color: #e6ffe6;
 }
@@ -390,8 +390,7 @@ body.dark-mode footer {
 
 /* Sidebar (se era branca) */
 body.dark-mode .sidebar {
-    background: #232926;
-    color: #e6ffe6;
+filter: brightness(0.9);
 }
 
 /* Offcanvas/menu lateral (se era branco) */
