@@ -136,7 +136,7 @@ main {
 }
 
 /* Dashboard com borda, sombra e cantos arredondados */
-main.dashboard{
+body.dashboard > main{
     margin-top:8px !important;
     border-radius:30px;
     border: solid 1px rgb(201, 201, 201);
@@ -422,4 +422,12 @@ body.dark-mode .index-img img {
     box-shadow: 0 2px 12px rgba(0,0,0,0.35);
     background: #232926;
     border-color: #181c1b;
+}
+
+.sidebar{
+    border-right: 1px solid #b6b6b6 ;
+    background-color:white !important;
+}
+.sidebar .active{
+    color:white !important;
 }

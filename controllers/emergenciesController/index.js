@@ -21,12 +21,12 @@ module.exports = {
         const user = await User.findOne({where:{id:req.session.id_user}})
         
         if(req.session.tipo == 'clinica'){
-        clinic = await Clinic.findOne({
-                where:{
-                    id_usuario:user.id
+            clinic = await Clinic.findOne({
+                    where:{
+                        id_usuario:user.id
+                    }
                 }
-            }
-        )
+            )
             if(req.params.id){
                 if(!Number(req.params.id)){
                     err = true
